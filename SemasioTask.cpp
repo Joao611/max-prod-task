@@ -3,6 +3,11 @@
 
 using namespace std;
 
+/**
+ * Limitations:
+ * - Array values may not be either INT_MIN or INT_MAX
+ */
+
 bool isMultipleOf3(int n) {
     return n % 3 == 0;
 }
@@ -59,6 +64,7 @@ int main()
         }
     }
 
+    // Sanitize output to filter out default values that to do not exist in the array
     int posProd = (pos3 != INT_MIN && high != INT_MIN) ? pos3 * high : INT_MIN;
     int negProd = (neg3 != INT_MIN && low != INT_MIN) ? neg3 * low : INT_MIN;
     int mixProd1 = (pos3CloseTo0 != INT_MIN && negCloseTo0 != INT_MIN) ? pos3CloseTo0 * negCloseTo0 : INT_MIN;
