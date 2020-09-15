@@ -33,6 +33,7 @@ int main()
 
     for (int x : a) {
         if (x >= 0) {
+            // Highest positive factors
             if (isMultipleOf3(x) && x > pos3) {
                 if (pos3 > high) {
                     // save as second best value
@@ -43,6 +44,8 @@ int main()
                 high = x;
             }
 
+            // Lowest positive values
+            // Used with other values to calculate negative products with the highest value (closest to 0)
             if (isMultipleOf3(x) && x < pos3CloseTo0) {
                 if (pos3CloseTo0 < posCloseTo0) {
                     // save as second best value
@@ -53,6 +56,7 @@ int main()
                 posCloseTo0 = x;
             }
         } else if (x < 0) {
+            // Lowest negative factors
             if (isMultipleOf3(x) && x < neg3) {
                 if (neg3 < low) {
                     // save as second best value
@@ -63,6 +67,8 @@ int main()
                 low = x;
             }
 
+            // Highest negative values
+            // Used with other values to calculate negative products with the highest value (closest to 0)
             if (isMultipleOf3(x) && x > neg3CloseTo0) {
                 if (neg3CloseTo0 > negCloseTo0) {
                     // save as second best value
