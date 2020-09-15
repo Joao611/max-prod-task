@@ -9,7 +9,7 @@ bool isMultipleOf3(int n) {
 
 int main()
 {
-    int a[] = {100, 43, 24, 39, 6, 12};
+    int a[] = {1, 2, -3};
 
     int pos3 = INT_MIN, high = INT_MIN;
     int neg3 = INT_MAX, low = INT_MAX;
@@ -59,10 +59,10 @@ int main()
         }
     }
 
-    int posProd = pos3 * high;
-    int negProd = neg3 * low;
-    int mixProd1 = pos3CloseTo0 * negCloseTo0;
-    int mixProd2 = neg3CloseTo0 * posCloseTo0;
+    int posProd = (pos3 != INT_MIN && high != INT_MIN) ? pos3 * high : INT_MIN;
+    int negProd = (neg3 != INT_MIN && low != INT_MIN) ? neg3 * low : INT_MIN;
+    int mixProd1 = (pos3CloseTo0 != INT_MIN && negCloseTo0 != INT_MIN) ? pos3CloseTo0 * negCloseTo0 : INT_MIN;
+    int mixProd2 = (neg3CloseTo0 != INT_MIN && posCloseTo0 != INT_MIN) ? neg3CloseTo0 * posCloseTo0 : INT_MIN;
 
     int maxRes = max(max(max(posProd, negProd), mixProd1), mixProd2);
 
