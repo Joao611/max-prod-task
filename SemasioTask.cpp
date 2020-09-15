@@ -90,4 +90,6 @@ int main()
     int maxRes = max(max(max(posProd, negProd), mixProd1), mixProd2);
 
     std::cout << "Result: " << maxRes << "\n";
+    
+    return 0;
 }
