@@ -28,7 +28,7 @@ int main()
             }
 
             if (isMultipleOf3(x) && x < pos3CloseTo0) {
-                if (pos3CloseTo0 > posCloseTo0) {
+                if (pos3CloseTo0 < posCloseTo0) {
                     // save as second best value
                     posCloseTo0 = pos3CloseTo0;
                 }
@@ -38,7 +38,7 @@ int main()
             }
         } else if (x < 0) {
             if (isMultipleOf3(x) && x < neg3) {
-                if (neg3 > low) {
+                if (neg3 < low) {
                     // save as second best value
                     low = neg3;
                 }
