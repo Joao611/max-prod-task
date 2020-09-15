@@ -22,10 +22,10 @@ int main()
     //int a[] = {1, 0, -3, 4, 5, 30}; // mix w/ solution > 0
     //int a[] = {1, 0, -3, 4, 5, 30, -60}; // mix w/ solution > 0
     //int a[] = {1, -3, 4, 5, 20}; // mix w/ solution < 0
-    //int a[] = {1, -3, 0, 4, 5, 20}; // mix w/ solution == 0
+    int a[] = {1, -3, 0, 4, 5, 20}; // mix w/ solution == 0
 
     // Custom
-    int a[] = {7367,884357,3553,1567,3};
+    //int a[] = {7367, 884357, 3553, 1567, 3};
 
     int pos3 = INT_MIN, high = INT_MIN;
     int neg3 = INT_MAX, low = INT_MAX;
