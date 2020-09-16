@@ -40,7 +40,7 @@ int main()
                     high = pos3;
                 }
                 pos3 = x;
-            } else if (!isMultipleOf3(x) && x > high) {
+            } else if (x > high) {
                 high = x;
             }
 
@@ -52,7 +52,7 @@ int main()
                     posCloseTo0 = pos3CloseTo0;
                 }
                 pos3CloseTo0 = x;
-            } else if (!isMultipleOf3(x) && x < posCloseTo0) {
+            } else if (x < posCloseTo0) {
                 posCloseTo0 = x;
             }
         } else if (x < 0) {
@@ -63,7 +63,7 @@ int main()
                     low = neg3;
                 }
                 neg3 = x;
-            } else if (!isMultipleOf3(x) && x < low) {
+            } else if (x < low) {
                 low = x;
             }
 
@@ -75,7 +75,7 @@ int main()
                     negCloseTo0 = neg3CloseTo0;
                 }
                 neg3CloseTo0 = x;
-            } else if (!isMultipleOf3(x) && x > negCloseTo0) {
+            } else if (x > negCloseTo0) {
                 negCloseTo0 = x;
             }
         }
