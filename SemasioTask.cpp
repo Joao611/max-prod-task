@@ -7,7 +7,6 @@ using namespace std;
 /**
  * Limitations:
  * - Array values may not be either INT_MIN or INT_MAX
- * - Cases with no solution are not supported
  */
 
 bool isMultipleOf3(int n) {
@@ -98,11 +97,26 @@ int main()
         {3, 0, -1},
         {3, 0, 3},
         {1, 2, 3},
+        {-3, -3},
+        {-3, 3, -3},
+        {3, 5},
+        {0, 0},
+        {343, 0},
+        {0, 455, -1},
+        // no solutions
+        {5, 5},
+        {343, 1},
+        {1, 545}
+
     };
 
     for (auto testCase : testCases) {
         int res = calcMaxProd(testCase.data(), testCase.size());
-        std::cout << "Result: " << res << "\n";
+        if (res != INT_MIN) {
+            std::cout << "Result: " << res << "\n";
+        } else {
+            std::cout << "Result: None found\n";
+        }
     }
     
     return 0;
