@@ -22,10 +22,10 @@ int main()
     //int a[] = {1, 0, -3, 4, 5, 30}; // mix w/ solution > 0
     //int a[] = {1, 0, -3, 4, 5, 30, -60}; // mix w/ solution > 0
     //int a[] = {1, -3, 4, 5, 20}; // mix w/ solution < 0
-    int a[] = {1, -3, 0, 4, 5, 20}; // mix w/ solution == 0
+    //int a[] = {1, -3, 0, 4, 5, 20}; // mix w/ solution == 0
 
     // Custom
-    //int a[] = {7367, 884357, 3553, 1567, 3};
+    int a[] = {3, 3};
 
     int pos3 = INT_MIN, high = INT_MIN;
     int neg3 = INT_MAX, low = INT_MAX;
@@ -83,9 +83,9 @@ int main()
 
     // Sanitize output to filter out default values that to do not exist in the array
     int posProd = (pos3 != INT_MIN && high != INT_MIN) ? pos3 * high : INT_MIN;
-    int negProd = (neg3 != INT_MIN && low != INT_MIN) ? neg3 * low : INT_MIN;
-    int mixProd1 = (pos3CloseTo0 != INT_MIN && negCloseTo0 != INT_MIN) ? pos3CloseTo0 * negCloseTo0 : INT_MIN;
-    int mixProd2 = (neg3CloseTo0 != INT_MIN && posCloseTo0 != INT_MIN) ? neg3CloseTo0 * posCloseTo0 : INT_MIN;
+    int negProd = (neg3 != INT_MAX && low != INT_MAX) ? neg3 * low : INT_MIN;
+    int mixProd1 = (pos3CloseTo0 != INT_MAX && negCloseTo0 != INT_MIN) ? pos3CloseTo0 * negCloseTo0 : INT_MIN;
+    int mixProd2 = (neg3CloseTo0 != INT_MIN && posCloseTo0 != INT_MAX) ? neg3CloseTo0 * posCloseTo0 : INT_MIN;
 
     int maxRes = max(max(max(posProd, negProd), mixProd1), mixProd2);
 
